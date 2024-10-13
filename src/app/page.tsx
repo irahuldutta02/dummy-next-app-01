@@ -2,7 +2,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+      <header className="row-start-1 flex justify-center items-center">
+        <h1 className="text-4xl sm:text-6xl font-bold">Welcome to Next.js</h1>
+      </header>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
@@ -48,6 +51,61 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+
+        <table className="table-auto border-collapse border border-gray-200 text-sm text-left mt-8">
+          <thead>
+            <tr>
+              <th className="border border-gray-300 px-4 py-2">Feature</th>
+              <th className="border border-gray-300 px-4 py-2">Next.js</th>
+              <th className="border border-gray-300 px-4 py-2">Remix</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-gray-300 px-4 py-2">
+                Data Fetching
+              </td>
+              <td className="border border-gray-300 px-4 py-2">
+                Static Generation, Server-side Rendering
+              </td>
+              <td className="border border-gray-300 px-4 py-2">
+                Loader Functions
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 px-4 py-2">Routing</td>
+              <td className="border border-gray-300 px-4 py-2">
+                File-based Routing
+              </td>
+              <td className="border border-gray-300 px-4 py-2">
+                Nested Routes
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 px-4 py-2">API Routes</td>
+              <td className="border border-gray-300 px-4 py-2">
+                Built-in API Routes
+              </td>
+              <td className="border border-gray-300 px-4 py-2">
+                No Built-in API Routes
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 px-4 py-2">Styling</td>
+              <td className="border border-gray-300 px-4 py-2">
+                CSS-in-JS, CSS Modules, Global CSS
+              </td>
+              <td className="border border-gray-300 px-4 py-2">
+                Any CSS Solution
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-gray-300 px-4 py-2">Deployment</td>
+              <td className="border border-gray-300 px-4 py-2">Vercel</td>
+              <td className="border border-gray-300 px-4 py-2">Any Platform</td>
+            </tr>
+          </tbody>
+        </table>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
